@@ -8,7 +8,7 @@ public class ControlSave : MonoBehaviour
     public InputField inputNick;
     public GameObject panel;
     public Text saludo;
-
+    private const int T = 1;
 
     public void save()
     {
@@ -27,6 +27,13 @@ public class ControlSave : MonoBehaviour
     }
     public void cancelSave()
     {
+        StartCoroutine("StartInicio");
+        
+    }
+
+    IEnumerator StartInicio()
+    {
+        yield return new WaitForSeconds(T);
         PlayerPrefs.DeleteKey("AvatarTemp");
         Application.LoadLevel("Inicio");
     }
