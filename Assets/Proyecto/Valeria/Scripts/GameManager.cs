@@ -55,7 +55,7 @@ public class GameManager : MonoBehaviour
     private void GameOver()
     {
         //me lleva a la primera escena
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene(3);
     }
 
 }
