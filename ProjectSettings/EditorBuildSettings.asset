@@ -32,4 +32,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Proyecto/Valeria/Scenes/Level_4.unity
     guid: 1cdb53f3e84d0ff4aa7dc079c864e158
+  - enabled: 1
+    path: Assets/Proyecto/Edwin/Scenes/Recompensas.unity
+    guid: 4778a87c0f9781d4ea916f9e50dc875f
+  - enabled: 1
+    path: Assets/Proyecto/Luis/Test.unity
+    guid: 3be4b9a38c823944c9b87c76f2ce5acd
+  - enabled: 1
+    path: Assets/Proyecto/Edwin/Scenes/KillScene.unity
+    guid: 9ea4247b1406b5846ab22843be96fdcc
   m_configObjects: {}

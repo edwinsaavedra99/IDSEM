@@ -40,7 +40,7 @@ public class ControlSave : MonoBehaviour
 
     public void continuar()
     {
-        Application.LoadLevel("Inicio");
+        Application.LoadLevel("Niveles");
     }
 
 
