@@ -43,7 +43,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e46cbc37d9f42a4b9dc4f2513587e96, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: '[] [][]'
+  text: "\xBFCuantos cuadrados hay? [] [][]"
   options:
   - text: 3
     correct: 0

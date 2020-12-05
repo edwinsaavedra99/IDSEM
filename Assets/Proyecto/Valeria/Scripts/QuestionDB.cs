@@ -11,6 +11,7 @@ public class QuestionDB : MonoBehaviour
     private List<Question> m_backup = null;
     private void Awake()
     {
+        //ejecute otra ves el nivel
         m_backup = mk_questionList.ToList();
     }
     
@@ -19,6 +20,7 @@ public class QuestionDB : MonoBehaviour
     {
         //en caso se nos acaben las preguntas, restauramos la bd
         if (mk_questionList.Count == 0)
+            //podria ser aqui PARTE DE LUIS
             RestoreBackup();
 
         int index = Random.Range(0, mk_questionList.Count);

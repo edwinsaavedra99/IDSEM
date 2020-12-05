@@ -6,6 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+<<<<<<< Updated upstream
     path: Assets/Proyecto/Edwin/Scenes/Splash.unity
     guid: aed2f867282972847b1ff4b3864523b9
   - enabled: 1
@@ -41,4 +42,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Proyecto/Edwin/Scenes/KillScene.unity
     guid: 9ea4247b1406b5846ab22843be96fdcc
+=======
+    path: Assets/Proyecto/Valeria/Scenes/Level_1.unity
+    guid: 6586e6348bd9fdc448c74de52f1dc6b5
+>>>>>>> Stashed changes
   m_configObjects: {}
