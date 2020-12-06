@@ -10,14 +10,15 @@ public class Item {
     public int puntos;
     public Image imagen;
     public string nombre;
-
-    public Item(string arg,string arg01,int arg02,Image arg03,string arg04)
+    public int categoria;
+    public Item(string arg,string arg01,int arg02,Image arg03,string arg04,int arg05)
     {
         id = arg;
         atributo = arg01;
         puntos = arg02;
         imagen = arg03;
         nombre = arg04;
+        categoria = arg05;
     }
 
     public Image getImage()

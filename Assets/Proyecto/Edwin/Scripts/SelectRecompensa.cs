@@ -12,7 +12,7 @@ public class SelectRecompensa : MonoBehaviour
 
     void Start()
     {
-        slot = PlayerPrefs.GetInt("NivelDesblock", 1);
+        slot = PlayerPrefs.GetInt("NivelSelect", 1);
     }
 
 
@@ -37,6 +37,6 @@ public class SelectRecompensa : MonoBehaviour
 
             PlayerPrefs.SetString("Slot4", PlayerPrefs.GetString(tesoro, "0"));
         }
-
+        imagenBorde.GetComponent<Image>().color = new Color32(67, 67, 67, 255);
     }
 }

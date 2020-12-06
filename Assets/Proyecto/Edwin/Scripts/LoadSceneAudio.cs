@@ -6,32 +6,31 @@ using System;
 using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
 
-public class NivelSelect : MonoBehaviour, IPointerClickHandler
+public class LoadSceneAudio : MonoBehaviour, IPointerClickHandler
 {
-    
-    public int nameLevel;
+    public string namescene;
     public AudioSource audioSource;
     public AudioClip audioClip;
     private const int T = 1;
-    private const string TAG = "Level_";
+    //private const string TAG = "Level_";
 
     public void OnPointerClick(PointerEventData eventData)
     {
-        if (nameLevel <= PlayerPrefs.GetInt("NivelDesblock", 1))
-        {
+        //if (nameLevel <= PlayerPrefs.GetInt("NivelDesblock", 1))
+        //{
             audioSource.PlayOneShot(audioClip);
             StartCoroutine("StartNivel");
-        }
-        else
-        {
+        //}
+        //else
+        //{
             //No se puede acceder a nivel --mostrar notificacion o algo
-        }
+        //}
     }
 
     IEnumerator StartNivel()
     {
         yield return new WaitForSeconds(T);
-        PlayerPrefs.SetInt("NivelSelect", nameLevel);
-        SceneManager.LoadScene(TAG+nameLevel+"");
+        //PlayerPrefs.SetInt("NivelSelect", nameLevel);
+        SceneManager.LoadScene(namescene);
     }
 }
