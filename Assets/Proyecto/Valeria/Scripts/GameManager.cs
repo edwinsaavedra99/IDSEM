@@ -15,7 +15,7 @@ public class GameManager : MonoBehaviour
     private QuestionDB m_quizDB = null;
     private QuizUI m_quizUI = null;
     private AudioSource m_audioSource = null;
-
+    private int count = 0;
     private void Start()
     {
         m_quizDB = GameObject.FindObjectOfType<QuestionDB>();
@@ -47,7 +47,15 @@ public class GameManager : MonoBehaviour
         yield return new WaitForSeconds(m_waitTime);
 
         if (optionButton.Option.correct)
-            NextQuestion();
+        {
+            count= count+1;
+            if (count == 2)
+                SceneManager.LoadScene("Level_1_2");
+            else
+                NextQuestion();
+
+        }
+            
         else
             GameOver();
     }
