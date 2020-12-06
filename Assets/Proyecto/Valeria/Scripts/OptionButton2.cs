@@ -28,7 +28,7 @@ public class OptionButton2 : MonoBehaviour
     }
     //notificar que opcion esta solucionando el jugador
     //para usar algun efecto usar este callback
-    public void Construct(Option2 option2, Action<OptionButton2> callback)
+    public void Construct(Option2 option2)
     {
         m_text.text = option2.text;
         m_button.onClick.RemoveAllListeners();
