@@ -5,7 +5,7 @@ using UnityEngine.EventSystems;
 [System.Serializable]
 public class DragDrop : MonoBehaviour, IDragHandler, IEndDragHandler, IBeginDragHandler
 {
-
+    public int id;
     public static GameObject itemDragging;
     Vector3 startPosition;
     Transform startParent;
