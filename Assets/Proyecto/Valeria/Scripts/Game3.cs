@@ -15,7 +15,7 @@ public class Game3 : MonoBehaviour
     private QuestionDB2 m_quizDB = null;
     private QuizUI2 m_quizUI = null;
     private AudioSource m_audioSource = null;
-    private Manager manager = null;
+    public Manager manager = null;
     private bool ganar;
 
     private void Start()
@@ -38,14 +38,7 @@ public class Game3 : MonoBehaviour
         yield return new WaitForSeconds(m_waitTime);
         if (m_audioSource.isPlaying)
             m_audioSource.Stop();
-        if (manager.count==4)
-        {
-            ganar = true;
-        }
-        else
-        {
-            ganar = false;
-        }
+      
         //cambio de sonido segun respuesta correcta o incorrecta
         m_audioSource.clip = ganar ? m_correctSound : m_incorrectSound;
 
@@ -55,7 +48,7 @@ public class Game3 : MonoBehaviour
         m_audioSource.Play();
         
 
-        if (manager.count == 4)
+        if (manager.count == 0)
             NextQuestion();
         else
             GameOver();

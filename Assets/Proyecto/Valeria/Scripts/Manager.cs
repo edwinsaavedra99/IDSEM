@@ -48,7 +48,7 @@ public class Manager : MonoBehaviour
             Imagen1.transform.position = im1.transform.position;
             source.clip = correct;
             source.Play();
-            count++;
+            count=count+1;
         }
         else
         {
@@ -65,7 +65,7 @@ public class Manager : MonoBehaviour
             Imagen2.transform.position = im2.transform.position;
             source.clip = correct;
             source.Play();
-            count++;
+            count = count + 1;
         }
         else
         {
@@ -82,7 +82,7 @@ public class Manager : MonoBehaviour
             Imagen3.transform.position = im3.transform.position;
             source.clip = correct;
             source.Play();
-            count++;
+            count = count + 1;
         }
         else
         {
@@ -99,7 +99,7 @@ public class Manager : MonoBehaviour
             Imagen4.transform.position = im4.transform.position;
             source.clip = correct;
             source.Play();
-            count++;
+            count = count + 1;
         }
         else
         {
