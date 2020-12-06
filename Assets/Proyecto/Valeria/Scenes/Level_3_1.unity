@@ -1204,7 +1204,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -110, y: -109}
+  m_AnchoredPosition: {x: -113.00003, y: -52}
   m_SizeDelta: {x: 30.819565, y: 35.93277}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &550209284
@@ -1626,7 +1626,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mk_questionList:
-  - {fileID: 906152203853436674, guid: ef17a8f0e2a2b5e4096535155c972c0d, type: 3}
+  - {fileID: 6998115443231329215, guid: cae1d9d1366452e49a35431560bbf6ba, type: 3}
 --- !u!4 &943739005
 Transform:
   m_ObjectHideFlags: 0
@@ -2005,7 +2005,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -110, y: -52}
+  m_AnchoredPosition: {x: -111.99994, y: -109}
   m_SizeDelta: {x: 30.819565, y: 35.93277}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1282900584
