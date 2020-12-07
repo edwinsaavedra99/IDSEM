@@ -1436,8 +1436,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -112, y: 27}
-  m_SizeDelta: {x: 30.819565, y: 35.93277}
+  m_AnchoredPosition: {x: -128.4, y: 27}
+  m_SizeDelta: {x: 63.63852, y: 35.93277}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &918990260
 MonoBehaviour:
@@ -1501,7 +1501,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: ce08942842a63d44e8b591f46b782c59, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2767,8 +2767,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -112, y: -86}
-  m_SizeDelta: {x: 30.819565, y: 35.93277}
+  m_AnchoredPosition: {x: -128.4, y: -86}
+  m_SizeDelta: {x: 63.629036, y: 35.93277}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1913355234
 MonoBehaviour:
@@ -2832,7 +2832,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: cc265cdb783995740b84bce0724aa1c9, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2885,8 +2885,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -112, y: -32}
-  m_SizeDelta: {x: 30.819565, y: 35.93277}
+  m_AnchoredPosition: {x: -128.4, y: -35.9}
+  m_SizeDelta: {x: 63.629036, y: 43.80932}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1923063556
 MonoBehaviour:
@@ -2950,7 +2950,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 17f328e74d7731641977a715ecaad009, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3543,6 +3543,12 @@ PrefabInstance:
       propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: dropImagen1
       objectReference: {fileID: 0}
+    - target: {fileID: 7989281190194275988, guid: 14308be8765fd26458a2550c89449745,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 9b250292f59f2fd41a8b450b56611ca9,
+        type: 3}
     - target: {fileID: 7989281190194275990, guid: 14308be8765fd26458a2550c89449745,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3601,7 +3607,7 @@ PrefabInstance:
     - target: {fileID: 7989281190194275990, guid: 14308be8765fd26458a2550c89449745,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -112
+      value: -128.4
       objectReference: {fileID: 0}
     - target: {fileID: 7989281190194275990, guid: 14308be8765fd26458a2550c89449745,
         type: 3}
@@ -3611,7 +3617,7 @@ PrefabInstance:
     - target: {fileID: 7989281190194275990, guid: 14308be8765fd26458a2550c89449745,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 30.819565
+      value: 63.629036
       objectReference: {fileID: 0}
     - target: {fileID: 7989281190194275990, guid: 14308be8765fd26458a2550c89449745,
         type: 3}

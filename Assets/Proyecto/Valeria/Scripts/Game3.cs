@@ -90,7 +90,8 @@ public class Game3 : MonoBehaviour
             }
             else if (level == "Level_4_2")
             {
-                SceneManager.LoadScene("Recompensas");
+                if (count == 4)
+                    SceneManager.LoadScene("Recompensas");
 
             }
 
