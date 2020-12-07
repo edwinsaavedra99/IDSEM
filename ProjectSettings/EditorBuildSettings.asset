@@ -5,7 +5,7 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
+  - enabled: 1
     path: Assets/Proyecto/Edwin/Scenes/Inicio.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
@@ -38,4 +38,16 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Proyecto/Valeria/Scenes/Level_4_2.unity
     guid: 6838e569e09401d48aa8b2ccbb18052d
+  - enabled: 1
+    path: Assets/Proyecto/Edwin/Scenes/Recompensas.unity
+    guid: 4778a87c0f9781d4ea916f9e50dc875f
+  - enabled: 1
+    path: Assets/Proyecto/Edwin/Scenes/Niveles.unity
+    guid: 16bda2036fda6c9489cbf1c9a13145f3
+  - enabled: 1
+    path: Assets/Proyecto/Edwin/Scenes/GameOver.unity
+    guid: 17509e7391e9c9d42b1c7526d2b1c288
+  - enabled: 1
+    path: Assets/Proyecto/Edwin/Scenes/Instrucciones.unity
+    guid: a400f151c2ec1754fb42b69605118242
   m_configObjects: {}

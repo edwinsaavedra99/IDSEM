@@ -1,7 +1,10 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+
 [RequireComponent(typeof(AudioSource))]
 public class GameManager : MonoBehaviour
 {
@@ -17,22 +20,57 @@ public class GameManager : MonoBehaviour
     private AudioSource m_audioSource = null;
     private int count = 0;
     private string level;
+
+    // Start is called before the first frame update
+    public Text namePerfil;
+    public float RoundLength = 30f;
+    public Text textTimer;
+
+    private float timeKeeper;
+    private bool isPaused = false;
+    private bool gameIsOver = false;
+
     private void Start()
     {
+        
         m_quizDB = GameObject.FindObjectOfType<QuestionDB>();
         m_quizUI = GameObject.FindObjectOfType<QuizUI>();
         m_audioSource = GetComponent<AudioSource>();
         level = Application.loadedLevelName;
         NextQuestion();
+        namePerfil.text = PlayerPrefs.GetString("Nick", "");
+        this.timeKeeper = this.RoundLength;
     }
+
+    // Update is called once per frame
+    void Update()
+    {
+        if (!this.isPaused && !this.gameIsOver)
+        {
+            this.timeKeeper -= Time.deltaTime;
+            textTimer.text = "" + (int) Math.Round(this.timeKeeper,0);
+
+            if (this.timeKeeper < 0f) DoGameOver();
+        }
+    }
+    void DoGameOver()
+    {
+        this.gameIsOver = true;
+        SceneManager.LoadScene("GameOver");
+    }
+
     private void NextQuestion()
     {
         m_quizUI.Construct(m_quizDB.GetRandom(),GiveAnswer);
+        this.timeKeeper = this.RoundLength;
     }
 
     private void GiveAnswer(OptionButton optionButton)
     {
-        StartCoroutine(GiveAnswerRoutine(optionButton));
+        if (!this.gameIsOver)
+        {
+            StartCoroutine(GiveAnswerRoutine(optionButton));
+        }
     }
     private IEnumerator GiveAnswerRoutine(OptionButton optionButton)
     {
@@ -87,10 +125,10 @@ public class GameManager : MonoBehaviour
     
             
         else
-            GameOver();
+           DoGameOver();
     }
 
-    private void GameOver()
+    /*private void GameOver()
     {
         if (level == "Level_3")
 
@@ -108,6 +146,6 @@ public class GameManager : MonoBehaviour
             SceneManager.LoadScene("Level_4");
 
      
-    }
+    }*/
 
 }

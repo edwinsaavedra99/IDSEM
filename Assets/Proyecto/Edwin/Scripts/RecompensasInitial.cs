@@ -29,6 +29,7 @@ public class RecompensasInitial : MonoBehaviour
             PlayerPrefs.SetString("Recompensa1",items[0].id);
             PlayerPrefs.SetString("Recompensa2", items[1].id);
             PlayerPrefs.SetString("Recompensa3", items[2].id);
+            PlayerPrefs.SetInt("NivelDesblock", PlayerPrefs.GetInt("NivelDesblock", 1) + 1);
         }
     }
 

@@ -651,7 +651,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 381824675}
-  - component: {fileID: 381824674}
   m_Layer: 0
   m_Name: ControlLevel
   m_TagString: Untagged
@@ -659,21 +658,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &381824674
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 381824673}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 09b45e3712bf52f46a317b2d8544895d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  namePerfil: {fileID: 1025177540}
-  RoundLength: 30
-  textTimer: {fileID: 509633769}
 --- !u!4 &381824675
 Transform:
   m_ObjectHideFlags: 0
@@ -974,6 +958,9 @@ MonoBehaviour:
   m_correctColor: {r: 0.3956268, g: 0.8962264, b: 0.3931559, a: 1}
   m_incorrectColor: {r: 0.6509434, g: 0.08904416, b: 0.08904416, a: 1}
   m_waitTime: 3
+  namePerfil: {fileID: 1025177540}
+  RoundLength: 30
+  textTimer: {fileID: 509633769}
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0

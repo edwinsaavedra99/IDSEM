@@ -1,7 +1,9 @@
 ﻿using System.Collections;
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class Game3 : MonoBehaviour
 {
@@ -18,6 +20,15 @@ public class Game3 : MonoBehaviour
     private string level;
     Vector2 Imagen1InitialPos, Imagen2InitialPos, Imagen3InitialPos, Imagen4InitialPos;
 
+    // Start is called before the first frame update
+    public Text namePerfil;
+    public float RoundLength = 30f;
+    public Text textTimer;
+
+    private float timeKeeper;
+    private bool isPaused = false;
+    private bool gameIsOver = false;
+
     private void Start()
     {
         m_quizDB = GameObject.FindObjectOfType<QuestionDB2>();
@@ -30,20 +41,81 @@ public class Game3 : MonoBehaviour
         Imagen4InitialPos = Imagen4.transform.position;
         level = Application.loadedLevelName;
         NextQuestion();
+        namePerfil.text = PlayerPrefs.GetString("Nick", "");
+        this.timeKeeper = this.RoundLength;
     }
+
+    // Update is called once per frame
+    void Update()
+    {
+        if (!this.isPaused && !this.gameIsOver)
+        {
+            this.timeKeeper -= Time.deltaTime;
+            textTimer.text = "" + (int)Math.Round(this.timeKeeper, 0);
+            if (this.timeKeeper < 0f) DoGameOver();
+            if (level == "Level_3_1")
+            {
+                if (count == 3)
+                    SceneManager.LoadScene("Level_3_2");
+                /*else
+                    DoGameOver();*/
+            }
+            else if (level == "Level_3_2")
+            {
+                if (count == 3)
+                    SceneManager.LoadScene("Recompensas");
+                /*else
+                    DoGameOver();*/
+            }
+            else if (level == "Level_2_1")
+            {
+                if (count == 4)
+                    SceneManager.LoadScene("Level_2_2");
+                /*else
+                    DoGameOver();*/
+            }
+            else if (level == "Level_2_2")
+            {
+                if (count == 4)
+                    SceneManager.LoadScene("Recompensas");
+                /*else
+                    DoGameOver();*/
+            }
+            else if (level == "Level_1_2")
+            {
+                if (count == 4)
+                    SceneManager.LoadScene("Recompensas");
+                /*else
+                    DoGameOver();*/
+            }
+            else if (level == "Level_4_2")
+            {
+                SceneManager.LoadScene("Recompensas");
+
+            }
+
+        }
+    }
+    void DoGameOver()
+    {
+        this.gameIsOver = true;
+        //StopAllCoroutines();
+        SceneManager.LoadScene("GameOver");
+    }
+
     private void NextQuestion()
     {
         m_quizUI.Construct(m_quizDB.GetRandom());
-        StartCoroutine(GiveAnswerRoutine());
+        //StartCoroutine(GiveAnswerRoutine());
     }
 
    
     private IEnumerator GiveAnswerRoutine()
     {
         yield return new WaitForSeconds(m_waitTime);
+        DoGameOver();
 
-
-        if (level == "Level_3_1")
+        /*if (level == "Level_3_1")
         {
             if (count == 3)
                 SceneManager.LoadScene("Level_3_2");
@@ -74,7 +146,7 @@ public class Game3 : MonoBehaviour
         else if (level == "Level_1_2")
         {
             if (count == 4)
-                SceneManager.LoadScene("Level_2");
+                SceneManager.LoadScene("Recompensas");
             else
                 GameOver();
         }
@@ -82,10 +154,10 @@ public class Game3 : MonoBehaviour
         {
             SceneManager.LoadScene("Level_1");
 
-        }
+        }*/
      }
 
-    private void GameOver()
+    /*private void GameOver()
     {
 
         if (level == "Level_3_1")
@@ -104,14 +176,14 @@ public class Game3 : MonoBehaviour
                 SceneManager.LoadScene("Level_2");
       
         else if (level == "Level_1_2")
-                SceneManager.LoadScene("Level_1");
+                SceneManager.LoadScene("Niveles");
 
         else if (level == "Level_4_1")
             SceneManager.LoadScene("Level_4");
 
          //me lleva a la primera escena
       //  SceneManager.LoadScene(0);
-    }
+    }*/
     public void dragImagen1()
     {
         Imagen1.transform.position = Input.mousePosition;
@@ -147,6 +219,7 @@ public class Game3 : MonoBehaviour
             Imagen1.transform.position = Imagen1InitialPos;
             source.clip = incorrect;
             source.Play();
+            StartCoroutine(GiveAnswerRoutine());
         }
     }
     public void dropImagen2()
@@ -158,12 +231,14 @@ public class Game3 : MonoBehaviour
             source.clip = correct;
             source.Play();
             count = count + 1;
+
         }
         else
         {
             Imagen2.transform.position = Imagen2InitialPos;
             source.clip = incorrect;
             source.Play();
+            StartCoroutine(GiveAnswerRoutine());
         }
     }
     public void dropImagen3()
@@ -181,6 +256,7 @@ public class Game3 : MonoBehaviour
             Imagen3.transform.position = Imagen3InitialPos;
             source.clip = incorrect;
             source.Play();
+            StartCoroutine(GiveAnswerRoutine());
         }
     }
     public void dropImagen4()
@@ -198,6 +274,7 @@ public class Game3 : MonoBehaviour
             Imagen4.transform.position = Imagen4InitialPos;
             source.clip = incorrect;
             source.Play();
+            StartCoroutine(GiveAnswerRoutine());
         }
     }
 

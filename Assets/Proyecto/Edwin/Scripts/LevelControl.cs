@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class LevelControl : MonoBehaviour
@@ -34,5 +35,6 @@ public class LevelControl : MonoBehaviour
     void DoGameOver()
     {
         this.gameIsOver = true;
+        SceneManager.LoadScene("GameOver");
     }
 }
