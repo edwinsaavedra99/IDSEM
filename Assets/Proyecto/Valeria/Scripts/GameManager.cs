@@ -16,12 +16,14 @@ public class GameManager : MonoBehaviour
     private QuizUI m_quizUI = null;
     private AudioSource m_audioSource = null;
     private int count = 0;
+    private string level;
     private void Start()
     {
         m_quizDB = GameObject.FindObjectOfType<QuestionDB>();
         m_quizUI = GameObject.FindObjectOfType<QuizUI>();
         m_audioSource = GetComponent<AudioSource>();
-            NextQuestion();
+        level = Application.loadedLevelName;
+        NextQuestion();
     }
     private void NextQuestion()
     {
@@ -48,13 +50,41 @@ public class GameManager : MonoBehaviour
 
         if (optionButton.Option.correct)
         {
-            count= count+1;
-            if (count == 2)
-                SceneManager.LoadScene("Level_1_2");
-            else
-                NextQuestion();
-
+            
+            if (level== "Level_1") {
+                count = count + 1;
+                if (count == 2)
+                    SceneManager.LoadScene("Level_1_2");
+                else
+                    NextQuestion();
+            }
+            else if (level == "Level_2")
+            {
+                count = count + 1;
+                if (count == 1)
+                    SceneManager.LoadScene("Level_2_1");
+                else
+                    NextQuestion();
+            }
+            else if (level == "Level_3")
+            {
+                count = count + 1;
+                if (count == 1)
+                    SceneManager.LoadScene("Level_3_1");
+                else
+                    NextQuestion();
+            }
+            else if (level == "Level_4")
+            {
+                count = count + 1;
+                if (count == 2)
+                    SceneManager.LoadScene("Level_4_2");
+                else
+                    NextQuestion();
+            }
         }
+
+    
             
         else
             GameOver();
@@ -62,8 +92,22 @@ public class GameManager : MonoBehaviour
 
     private void GameOver()
     {
-        //me lleva a la primera escena
-        SceneManager.LoadScene(3);
+        if (level == "Level_3")
+
+            SceneManager.LoadScene("Level_3");
+
+        else if (level == "Level_2")
+
+            SceneManager.LoadScene("Level_2");
+
+        else if (level == "Level_1")
+
+            SceneManager.LoadScene("Level_1");
+
+        else if (level == "Level_4")
+            SceneManager.LoadScene("Level_4");
+
+     
     }
 
 }

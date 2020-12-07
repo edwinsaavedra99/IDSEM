@@ -517,6 +517,7 @@ GameObject:
   - component: {fileID: 519420029}
   - component: {fileID: 519420033}
   - component: {fileID: 519420030}
+  - component: {fileID: 519420034}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -544,12 +545,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53d4efb2864157f40bb5190969478caf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_correctSound: {fileID: 0}
-  m_incorrectSound: {fileID: 0}
-  m_correctColor: {r: 0, g: 0, b: 0, a: 1}
-  m_incorrectColor: {r: 0, g: 0, b: 0, a: 1}
+  Imagen1: {fileID: 1620065038}
+  Imagen2: {fileID: 1913355232}
+  Imagen3: {fileID: 1923063554}
+  Imagen4: {fileID: 918990258}
+  im1: {fileID: 1170986149}
+  im2: {fileID: 1604110526}
+  im3: {fileID: 1877925694}
+  im4: {fileID: 899751751}
   m_waitTime: 10
-  manager: {fileID: 2098056773}
+  source: {fileID: 519420034}
+  correct: {fileID: 8300000, guid: f5ea9983be5b52540a63ef9289b2514d, type: 3}
+  incorrect: {fileID: 8300000, guid: 9b5ebd6c3758e914ba5d65151246e574, type: 3}
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0
@@ -620,6 +627,102 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!82 &519420034
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -1348,7 +1451,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 2098056773}
+        - m_Target: {fileID: 519420030}
           m_MethodName: dragImagen4
           m_Mode: 1
           m_Arguments:
@@ -1363,7 +1466,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 2098056773}
+        - m_Target: {fileID: 519420030}
           m_MethodName: dropImagen4
           m_Mode: 1
           m_Arguments:
@@ -2448,7 +2551,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 2098056773}
+        - m_Target: {fileID: 519420030}
           m_MethodName: dragImagen2
           m_Mode: 1
           m_Arguments:
@@ -2463,7 +2566,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 2098056773}
+        - m_Target: {fileID: 519420030}
           m_MethodName: dropImagen2
           m_Mode: 1
           m_Arguments:
@@ -2566,7 +2669,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 2098056773}
+        - m_Target: {fileID: 519420030}
           m_MethodName: dragImagen3
           m_Mode: 1
           m_Arguments:
@@ -2581,7 +2684,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 2098056773}
+        - m_Target: {fileID: 519420030}
           m_MethodName: dropImagen3
           m_Mode: 1
           m_Arguments:
@@ -3113,12 +3216,22 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 2098056773}
+      objectReference: {fileID: 519420030}
     - target: {fileID: 7989281190194275979, guid: 14308be8765fd26458a2550c89449745,
         type: 3}
       propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 2098056773}
+      objectReference: {fileID: 519420030}
+    - target: {fileID: 7989281190194275979, guid: 14308be8765fd26458a2550c89449745,
+        type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: dragImagen1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7989281190194275979, guid: 14308be8765fd26458a2550c89449745,
+        type: 3}
+      propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: dropImagen1
+      objectReference: {fileID: 0}
     - target: {fileID: 7989281190194275990, guid: 14308be8765fd26458a2550c89449745,
         type: 3}
       propertyPath: m_LocalPosition.x

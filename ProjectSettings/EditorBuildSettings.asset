@@ -11,4 +11,31 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Proyecto/Valeria/Scenes/Level_1_2.unity
     guid: 5e8a9f72e4ef0cf40b93fe239611f805
+  - enabled: 1
+    path: Assets/Proyecto/Valeria/Scenes/Level_1.unity
+    guid: 6586e6348bd9fdc448c74de52f1dc6b5
+  - enabled: 1
+    path: Assets/Proyecto/Valeria/Scenes/Level_2.unity
+    guid: 6415f463a5b3cfe48aec08d114955f45
+  - enabled: 1
+    path: Assets/Proyecto/Valeria/Scenes/Level_2_1.unity
+    guid: 16474a6bedfe15f47a19f15f256e3bc4
+  - enabled: 1
+    path: Assets/Proyecto/Valeria/Scenes/Level_2_2.unity
+    guid: bd256fad8aa4df24a82643fe1dfd432a
+  - enabled: 1
+    path: Assets/Proyecto/Valeria/Scenes/Level_3.unity
+    guid: a17a6c5291cfdb54ca2ece645800f295
+  - enabled: 1
+    path: Assets/Proyecto/Valeria/Scenes/Level_3_1.unity
+    guid: e82cc2d0d6f809041973c9e061a3cdd5
+  - enabled: 1
+    path: Assets/Proyecto/Valeria/Scenes/Level_3_2.unity
+    guid: d0f0541cb6f23bc4380d4bb81cd16af5
+  - enabled: 1
+    path: Assets/Proyecto/Valeria/Scenes/Level_4.unity
+    guid: 1cdb53f3e84d0ff4aa7dc079c864e158
+  - enabled: 1
+    path: Assets/Proyecto/Valeria/Scenes/Level_4_2.unity
+    guid: 6838e569e09401d48aa8b2ccbb18052d
   m_configObjects: {}

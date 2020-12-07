@@ -5,25 +5,30 @@ using UnityEngine.SceneManagement;
 
 public class Game3 : MonoBehaviour
 {
-    [SerializeField] private AudioClip m_correctSound = null;
-    [SerializeField] private AudioClip m_incorrectSound = null;
-    [SerializeField] private Color m_correctColor = Color.black;
-    [SerializeField] private Color m_incorrectColor = Color.black;
+    public GameObject Imagen1, Imagen2, Imagen3, Imagen4, im1, im2, im3, im4;
     //tiempo de espera entre cada pregunta
     [SerializeField] private float m_waitTime = 0.0f;
 
     private QuestionDB2 m_quizDB = null;
     private QuizUI2 m_quizUI = null;
-    private AudioSource m_audioSource = null;
-    public Manager manager = null;
-    private bool ganar;
+    public AudioSource source;
+    public AudioClip correct;
+    public AudioClip incorrect;
+    private int count = 0;
+    private string level;
+    Vector2 Imagen1InitialPos, Imagen2InitialPos, Imagen3InitialPos, Imagen4InitialPos;
 
     private void Start()
     {
         m_quizDB = GameObject.FindObjectOfType<QuestionDB2>();
         m_quizUI = GameObject.FindObjectOfType<QuizUI2>();
-        manager = GameObject.FindObjectOfType<Manager>();
-        m_audioSource = GetComponent<AudioSource>();
+    
+    
+        Imagen1InitialPos = Imagen1.transform.position;
+        Imagen2InitialPos = Imagen2.transform.position;
+        Imagen3InitialPos = Imagen3.transform.position;
+        Imagen4InitialPos = Imagen4.transform.position;
+        level = Application.loadedLevelName;
         NextQuestion();
     }
     private void NextQuestion()
@@ -36,28 +41,164 @@ public class Game3 : MonoBehaviour
     private IEnumerator GiveAnswerRoutine()
     {
         yield return new WaitForSeconds(m_waitTime);
-        if (m_audioSource.isPlaying)
-            m_audioSource.Stop();
-      
-        //cambio de sonido segun respuesta correcta o incorrecta
-        m_audioSource.clip = ganar ? m_correctSound : m_incorrectSound;
 
-        //cambio de color segun respuesta correcta o incorrecta
-       // optionButton.SetColor(ganar ? m_correctColor : m_incorrectColor);
 
-        m_audioSource.Play();
-        
+        if (level == "Level_3_1")
+        {
+            if (count == 3)
+                SceneManager.LoadScene("Level_3_2");
+            else
+                GameOver();
+        }
+        else if (level == "Level_3_2")
+        {
+            if (count == 3)
+                SceneManager.LoadScene("Level_4");
+            else
+                GameOver();
+        }
+        else if (level == "Level_2_1")
+        {
+            if (count == 4)
+                SceneManager.LoadScene("Level_2_2");
+            else
+                GameOver();
+        }
+        else if (level == "Level_2_2")
+        {
+            if (count == 4)
+                SceneManager.LoadScene("Level_3");
+            else
+                GameOver();
+        }
+        else if (level == "Level_1_2")
+        {
+            if (count == 4)
+                SceneManager.LoadScene("Level_2");
+            else
+                GameOver();
+        }
+        else if (level == "Level_4_2")
+        {
+            SceneManager.LoadScene("Level_1");
 
-        if (manager.count == 0)
-            NextQuestion();
-        else
-            GameOver();
-    }
+        }
+     }
 
     private void GameOver()
     {
-        //me lleva a la primera escena
-        SceneManager.LoadScene(0);
+
+        if (level == "Level_3_1")
+        
+                SceneManager.LoadScene("Level_3");
+             
+        else if (level == "Level_3_2")
+        
+                SceneManager.LoadScene("Level_3");
+       
+        else if (level == "Level_2_1")
+       
+                SceneManager.LoadScene("Level_2");
+       
+        else if (level == "Level_2_2")
+                SceneManager.LoadScene("Level_2");
+      
+        else if (level == "Level_1_2")
+                SceneManager.LoadScene("Level_1");
+
+        else if (level == "Level_4_1")
+            SceneManager.LoadScene("Level_4");
+
+         //me lleva a la primera escena
+      //  SceneManager.LoadScene(0);
+    }
+    public void dragImagen1()
+    {
+        Imagen1.transform.position = Input.mousePosition;
+
+    }
+    public void dragImagen2()
+    {
+        Imagen2.transform.position = Input.mousePosition;
+
+    }
+    public void dragImagen3()
+    {
+        Imagen3.transform.position = Input.mousePosition;
+
+    }
+    public void dragImagen4()
+    {
+        Imagen4.transform.position = Input.mousePosition;
+    }
+
+    public void dropImagen1()
+    {
+        float Distance = Vector3.Distance(Imagen1.transform.position, im1.transform.position);
+        if (Distance < 40)
+        {
+            Imagen1.transform.position = im1.transform.position;
+            source.clip = correct;
+            source.Play();
+            count = count + 1;
+        }
+        else
+        {
+            Imagen1.transform.position = Imagen1InitialPos;
+            source.clip = incorrect;
+            source.Play();
+        }
+    }
+    public void dropImagen2()
+    {
+        float Distance = Vector3.Distance(Imagen2.transform.position, im2.transform.position);
+        if (Distance < 50)
+        {
+            Imagen2.transform.position = im2.transform.position;
+            source.clip = correct;
+            source.Play();
+            count = count + 1;
+        }
+        else
+        {
+            Imagen2.transform.position = Imagen2InitialPos;
+            source.clip = incorrect;
+            source.Play();
+        }
+    }
+    public void dropImagen3()
+    {
+        float Distance = Vector3.Distance(Imagen3.transform.position, im3.transform.position);
+        if (Distance < 50)
+        {
+            Imagen3.transform.position = im3.transform.position;
+            source.clip = correct;
+            source.Play();
+            count = count + 1;
+        }
+        else
+        {
+            Imagen3.transform.position = Imagen3InitialPos;
+            source.clip = incorrect;
+            source.Play();
+        }
+    }
+    public void dropImagen4()
+    {
+        float Distance = Vector3.Distance(Imagen4.transform.position, im4.transform.position);
+        if (Distance < 50)
+        {
+            Imagen4.transform.position = im4.transform.position;
+            source.clip = correct;
+            source.Play();
+            count = count + 1;
+        }
+        else
+        {
+            Imagen4.transform.position = Imagen4InitialPos;
+            source.clip = incorrect;
+            source.Play();
+        }
     }
 
 }
