@@ -8,12 +8,16 @@ public class EnemyBehavior : MonoBehaviour
     
     private float variable;
     public float speed;
+    private float remainspeed;
     public GameObject player;
-    Vector3 initialPosition; 
+    Vector3 initialPosition;
+    public gameControllerFight gameControllerFight; 
 
     // Start is called before the first frame update
     void Start()
     {
+        remainspeed = speed;
+        transform.rotation = Quaternion.Euler(0,-135,0);
         //player = GameObject.FindGameObjectWithTag("Player");
         initialPosition = transform.position;
         this.variable = transform.position.x;
@@ -29,15 +33,21 @@ public class EnemyBehavior : MonoBehaviour
             target = player.transform.position;
         }
         if( transform.position.x >= variable ) {
-            transform.rotation = Quaternion.Euler(0,0,0);
+            gameControllerFight.MonsterDireccion =1;
+            transform.rotation = Quaternion.Euler(0,135,0);
         }else{
-           transform.rotation = Quaternion.Euler(0,180,0);
+            gameControllerFight.MonsterDireccion =2;
+            transform.rotation = Quaternion.Euler(0,-135,0);
         }
-        this.variable = transform.position.x;
+        //change if its necesary, delete just the if condition
+        if(!gameControllerFight.underAtackMonster){
+            this.variable = transform.position.x;
+            float fixedSpeed = speed*Time.deltaTime;
+            transform.position = Vector3.MoveTowards(transform.position, target, fixedSpeed);
+            Debug.DrawLine(transform.position, target, Color.green); 
 
-        float fixedSpeed = speed*Time.deltaTime;
-        transform.position = Vector3.MoveTowards(transform.position, target, fixedSpeed);
-        Debug.DrawLine(transform.position, target, Color.green); 
+        }
+        
 
     }
 }

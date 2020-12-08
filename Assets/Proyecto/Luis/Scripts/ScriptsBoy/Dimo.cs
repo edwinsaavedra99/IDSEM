@@ -2,17 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-//Basic Player Script//
-//controls: 
-//A, D, Left, Right to move
-//Left Alt to attack
-//Space to jump
-//Z is to see dead animation
-
-public class Demo : MonoBehaviour {
-
-	//variable for how fast player runs//
-	private float speed = 5f;
+public class Dimo : MonoBehaviour
+{
+private float speed = 5f;
 
 	private bool facingRight = true;
 	private Animator anim;
@@ -23,16 +15,16 @@ public class Demo : MonoBehaviour {
 
 	//variable for how high player jumps//
 	[SerializeField]
-	private float jumpForce = 280f; // antes era 300f
+	private float jumpForce = 300f;
 
-	public Rigidbody2D rb { get; set; }
+	public Rigidbody rb { get; set; }
 
 	bool dead = false;
 	bool attack = false;
 
 	void Start () {
-		GetComponent<Rigidbody2D> ().freezeRotation = true;
-		rb = GetComponent<Rigidbody2D> ();
+		GetComponent<Rigidbody> ().freezeRotation = true;
+		rb = GetComponent<Rigidbody> ();
 		anim = GetComponentInChildren<Animator> ();
 
 	}
