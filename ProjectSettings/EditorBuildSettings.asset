@@ -50,4 +50,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Proyecto/Edwin/Scenes/Instrucciones.unity
     guid: a400f151c2ec1754fb42b69605118242
+  - enabled: 1
+    path: Assets/Proyecto/Edwin/Scenes/Perfil.unity
+    guid: 5a83b6cef7f2cfa49be88c48f6dc5d77
   m_configObjects: {}

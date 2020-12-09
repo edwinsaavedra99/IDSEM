@@ -458,6 +458,7 @@ GameObject:
   - component: {fileID: 1237399364}
   - component: {fileID: 1237399363}
   - component: {fileID: 1237399362}
+  - component: {fileID: 1237399365}
   m_Layer: 0
   m_Name: SplashObject
   m_TagString: Untagged
@@ -587,3 +588,47 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1237399365
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1237399361}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bf4a90e000add44e898f3de98bf48e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemnscategoria1:
+  - id: c1i1
+    atributo: Fuerza
+    puntos: 10
+    imagen: {fileID: 3795827189432433951, guid: ae34ce20040a8244ab0d1c9532543b7b,
+      type: 3}
+    nombre: Desoladora
+    categoria: 1
+  itemnscategoria2:
+  - id: c2i1
+    atributo: Agilidad
+    puntos: 20
+    imagen: {fileID: 5290936867770861228, guid: 243e1841d86648d4f9d545d973fcc8a2,
+      type: 3}
+    nombre: nose
+    categoria: 2
+  itemnscategoria3:
+  - id: c3i1
+    atributo: fuerza
+    puntos: 30
+    imagen: {fileID: 2472115545441155515, guid: 4ccf750e94b2e9b4a99a70248bdf7f82,
+      type: 3}
+    nombre: noseee
+    categoria: 3
+  itemnscategoria4:
+  - id: c4i1
+    atributo: inteligencia
+    puntos: 40
+    imagen: {fileID: 3795827189432433951, guid: ae34ce20040a8244ab0d1c9532543b7b,
+      type: 3}
+    nombre: ahah
+    categoria: 4
