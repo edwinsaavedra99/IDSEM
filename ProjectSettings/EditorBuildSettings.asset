@@ -53,4 +53,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Proyecto/Edwin/Scenes/Perfil.unity
     guid: 5a83b6cef7f2cfa49be88c48f6dc5d77
+  - enabled: 1
+    path: Assets/Proyecto/Luis/Fight.unity
+    guid: 2598c497f0f94774f939e06f9fb4a29b
+  - enabled: 1
+    path: Assets/Proyecto/Luis/Test.unity
+    guid: 3be4b9a38c823944c9b87c76f2ce5acd
+  - enabled: 1
+    path: Assets/Proyecto/Luis/Test 1.unity
+    guid: 30453077288327146aa7dbb5bbcbe427
   m_configObjects: {}

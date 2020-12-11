@@ -21,10 +21,10 @@ public class gameControllerFight : MonoBehaviour
     public Text messageDisplayText; //food
     //public Text foodDislayText; //food
     public int lifepoints;
-    public int enemypointsinit;//food
+    public int enemypointsinit=1000;//food
     public Slider lifeSlider;
     public Slider enemySlider;
-    public int enemyDamage;
+    public int enemyDamage=100;
     public int playerDamage;
     public bool endGame;
     
@@ -33,6 +33,13 @@ public class gameControllerFight : MonoBehaviour
     
     void Start()
     {
+        //datos 
+        playerDamage = datosController.Damage;
+        lifepoints = datosController.Vitality;
+        enemyDamage = enemyDamage - datosController.Resistance ;
+        //sotad 
+
+
         SoundController.Instance.rugidoEnemy();
         this.MonsterDireccion = 2;
         
@@ -93,3 +100,4 @@ public class gameControllerFight : MonoBehaviour
             
     }
 }
+
