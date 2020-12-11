@@ -22,10 +22,13 @@ public class EnemyBehavior : MonoBehaviour
         initialPosition = transform.position;
         this.variable = transform.position.x;
     }
-
+    void Update() {
+        
+    }
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
+        if( !gameControllerFight.endGame){
         Vector3 target = initialPosition;
         float dist = Vector3.Distance(player.transform.position, transform.position);
         if (dist < visionRadious)
@@ -40,12 +43,13 @@ public class EnemyBehavior : MonoBehaviour
             transform.rotation = Quaternion.Euler(0,-135,0);
         }
         //change if its necesary, delete just the if condition
-        if(!gameControllerFight.underAtackMonster){
+        if(!gameControllerFight.underAtackMonster ){
             this.variable = transform.position.x;
             float fixedSpeed = speed*Time.deltaTime;
             transform.position = Vector3.MoveTowards(transform.position, target, fixedSpeed);
             Debug.DrawLine(transform.position, target, Color.green); 
 
+        }
         }
         
 

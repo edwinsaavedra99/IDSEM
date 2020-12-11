@@ -26,13 +26,16 @@ public class gameControllerFight : MonoBehaviour
     public Slider enemySlider;
     public int enemyDamage;
     public int playerDamage;
+    public bool endGame;
+    
 
 
     
     void Start()
     {
+        SoundController.Instance.rugidoEnemy();
         this.MonsterDireccion = 2;
-
+        
         this.lifeSlider.minValue = 0;
         this.lifeSlider.maxValue = lifepoints;
         this.lifeSlider.value = lifepoints;
@@ -44,10 +47,25 @@ public class gameControllerFight : MonoBehaviour
         this.enemyDisplayText.text = ""+enemypointsinit;
 
         this.underAtackMonster = false;
+        this.endGame = false;
     }
 
     // Update is called once per frame
-    void Update()
+    void Update() {
+        if(lifepoints <=0 ){
+            this.endGame =true;
+            this.Player.getDead();
+            SoundController.Instance.loseGame();
+        }
+        if(enemypointsinit <=0){
+            this.endGame = true;
+            SoundController.Instance.winGame();
+            
+        }
+        
+        
+    }
+    void FixedUpdate()
     {
         if(Time.time > tiempoDisparador ){
             if(this.underAtackMonster){
@@ -62,6 +80,7 @@ public class gameControllerFight : MonoBehaviour
         this.lifeDisplayText.text = "" + lifepoints;
         this.lifeSlider.value = lifepoints;
         this.Player.getHurt();
+        SoundController.Instance.rugidoEnemy();
         this.tiempoDisparador = Time.time + this.tiempoCouldDownMonster;
 
     }
@@ -69,6 +88,7 @@ public class gameControllerFight : MonoBehaviour
         this.enemypointsinit = this.enemypointsinit - this.playerDamage;
         this.enemyDisplayText.text = "" + enemypointsinit;
         this.enemySlider.value = enemypointsinit;
+        //SoundController.Instance.painEnemy();
         
             
     }

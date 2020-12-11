@@ -27,6 +27,7 @@ public class Damage : MonoBehaviour
             Debug.Log("Pressed primary button.");
             anim.SetBool("Attack",true);
             this.isPunch =true;
+            SoundController.Instance.punchPlayer();
         }
         if (Input.GetMouseButtonUp(0))
         {
@@ -45,19 +46,16 @@ public class Damage : MonoBehaviour
     {
         if (collider.tag == "Enemy" )
         {
-            if(isPunch == false){
-            Debug.Log("enemigo hace daño");
-            //this.lifepoints = this.lifepoints - this.enemyDamage;
-            //this.lifeDisplayText.text = "" + lifepoints;
-            //this.lifeSlider.value = lifepoints;
             gameControllerFight.underAtackMonster =true;
             gameControllerFight.tiempoDisparador = Time.time + gameControllerFight.tiempoCouldDownMonster;
-            //Destroy(collider.gameObject);
+
+            if(isPunch == true){
+            Debug.Log("PlAyer hace daño");
+                gameControllerFight.reducirVidaEnemigo();       
             }
-            else{
-                Debug.Log("jugador hace daño");
-                gameControllerFight.reducirVidaEnemigo();
-            }
+        }
+        if(collider.tag =="Wall"){
+            reIntent();
         }       
     }
     private void OnTriggerExit2D(Collider2D other) {
@@ -77,5 +75,9 @@ public class Damage : MonoBehaviour
     }
     public void getDead(){
         anim.SetBool("Dead",true);
+        anim.SetFloat ("Speed", 0);
+    }
+    public void reIntent(){
+        transform.position = new Vector3(0,4,0);
     }
 }

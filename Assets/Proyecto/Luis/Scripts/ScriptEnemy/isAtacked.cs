@@ -13,15 +13,28 @@ public class isAtacked : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        if(gameControllerFight.underAtackMonster){
+        if(gameControllerFight.endGame){
             animator.SetBool("Walk Forward",false);
-            animator.SetTrigger("Attack 02");   
-        }
-        if(!gameControllerFight.underAtackMonster){
+            animator.SetTrigger("StopAttack"); 
+            
+            if(gameControllerFight.enemypointsinit <= 0 ){
+                //animator.SetTrigger("Die");  
+            }
+            
+        
+        }else{
+            if(gameControllerFight.underAtackMonster){
+            animator.SetBool("Walk Forward",false);
+            animator.SetTrigger("Attack 02"); 
+            //SoundController.Instance.bitEnemy();
+            }
+            if(!gameControllerFight.underAtackMonster){
             animator.SetBool("Walk Forward",true);
             animator.SetTrigger("StopAttack");   
+            }
         }
+        
     }
 }

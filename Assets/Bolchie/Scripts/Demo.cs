@@ -13,7 +13,7 @@ public class Demo : MonoBehaviour {
 
 	//variable for how fast player runs//
 	private float speed = 5f;
-
+	public gameControllerFight gameControllerFight;
 	private bool facingRight = true;
 	private Animator anim;
 	bool grounded = false;
@@ -39,12 +39,19 @@ public class Demo : MonoBehaviour {
 
 	void Update()
 	{
+		if(gameControllerFight.endGame){
+
+		}else{
 		HandleInput ();
+		}
 	}
 
 	//movement//
 	void FixedUpdate ()
 	{
+		if(gameControllerFight.endGame){
+
+		}else{
 		grounded = Physics2D.OverlapCircle (groundCheck.position, groundRadius, whatIsGround);
 		anim.SetBool ("Ground", grounded);
 
@@ -61,6 +68,7 @@ public class Demo : MonoBehaviour {
 
 		else if (horizontal < 0 && facingRight && !dead && !attack){
 			Flip (horizontal);
+		}
 		}
 	}
 
