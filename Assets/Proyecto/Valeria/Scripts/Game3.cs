@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿
+using System.Collections;
 using System;
 using System.Collections.Generic;
 using UnityEngine;
@@ -220,7 +221,7 @@ public class Game3 : MonoBehaviour
             Imagen1.transform.position = Imagen1InitialPos;
             source.clip = incorrect;
             source.Play();
-            StartCoroutine(GiveAnswerRoutine());
+           // StartCoroutine(GiveAnswerRoutine());
         }
     }
     public void dropImagen2()
@@ -239,7 +240,7 @@ public class Game3 : MonoBehaviour
             Imagen2.transform.position = Imagen2InitialPos;
             source.clip = incorrect;
             source.Play();
-            StartCoroutine(GiveAnswerRoutine());
+            //StartCoroutine(GiveAnswerRoutine());
         }
     }
     public void dropImagen3()
@@ -257,7 +258,7 @@ public class Game3 : MonoBehaviour
             Imagen3.transform.position = Imagen3InitialPos;
             source.clip = incorrect;
             source.Play();
-            StartCoroutine(GiveAnswerRoutine());
+            //StartCoroutine(GiveAnswerRoutine());
         }
     }
     public void dropImagen4()
@@ -275,7 +276,7 @@ public class Game3 : MonoBehaviour
             Imagen4.transform.position = Imagen4InitialPos;
             source.clip = incorrect;
             source.Play();
-            StartCoroutine(GiveAnswerRoutine());
+            //StartCoroutine(GiveAnswerRoutine());
         }
     }
 

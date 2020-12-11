@@ -7,7 +7,8 @@ public class AuxScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        PlayerPrefs.DeleteKey("NivelDesblock");
+        //PlayerPrefs.DeleteKey("NivelDesblock");
+        PlayerPrefs.DeleteAll();
     }
 
     // Update is called once per frame
