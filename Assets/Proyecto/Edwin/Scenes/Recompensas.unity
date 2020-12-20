@@ -2518,7 +2518,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.000012398, y: -2.9}
+  m_AnchoredPosition: {x: -0.000012398, y: -0.0000023842}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &829759955
@@ -2571,7 +2571,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tesoro: Recompensa1
-  imagenBorde: {fileID: 1341096262}
+  imagenBorde: {fileID: 829759955}
 --- !u!114 &829759958
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2681,7 +2681,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 22.6, y: -99.891}
-  m_SizeDelta: {x: 186.59549, y: 170.33391}
+  m_SizeDelta: {x: 180, y: 180}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &872057117
 MonoBehaviour:
@@ -2702,7 +2702,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 9887c11e574c4654d973a7aa54944fc0, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2908,7 +2908,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -214.4, y: -99.891}
-  m_SizeDelta: {x: 189.38281, y: 170.33398}
+  m_SizeDelta: {x: 180, y: 180}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1341096262
 MonoBehaviour:
@@ -2929,7 +2929,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 9887c11e574c4654d973a7aa54944fc0, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3320,7 +3320,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tesoro: Recompensa2
-  imagenBorde: {fileID: 872057117}
+  imagenBorde: {fileID: 1712847538}
 --- !u!114 &1712847541
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3431,7 +3431,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.39562568}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -2.6599731, y: 4.980005}
+  m_AnchoredPosition: {x: 0.000023127, y: 9.3937}
   m_SizeDelta: {x: 100, y: 87}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1870075595
@@ -3484,7 +3484,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tesoro: Recompensa3
-  imagenBorde: {fileID: 2125048994}
+  imagenBorde: {fileID: 1870075595}
 --- !u!114 &1870075598
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8348,7 +8348,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 255.9, y: -99.9}
-  m_SizeDelta: {x: 166.67838, y: 170.31558}
+  m_SizeDelta: {x: 180, y: 180}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2125048994
 MonoBehaviour:
@@ -8369,7 +8369,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 9887c11e574c4654d973a7aa54944fc0, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
