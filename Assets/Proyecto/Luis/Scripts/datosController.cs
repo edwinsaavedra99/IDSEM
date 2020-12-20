@@ -18,6 +18,10 @@ public class datosController : MonoBehaviour
     private List<Item> items;
     void Start()
     {
+        
+        
+    }
+    void Awake() {
         bD = BDItemns.Instance;
         if (bD != null)
         {            
@@ -46,25 +50,26 @@ public class datosController : MonoBehaviour
         }else{
          Debug.Log ("database not found");   
         }
-        
-    }
-    void Awake() {
-        //actualizar datos :v 
     }
     // Update is called once per frame
     void Update()
     {
         
     }
-    void asignAttribute(Item aux){
-        if(aux.atributo.Equals("inteligencia") ){
-            Resistance  = Resistance+ aux.puntos;      
+    public void asignAttribute(Item aux){
+        if(aux.compare("resistencia") ){
+            Resistance  = Resistance+ aux.puntos;
+            return;
         }
-        if(aux.atributo.Equals("Agilidad") ){
+        if(aux.compare("daño") ){
             Damage  = Damage + aux.puntos;      
+            return;
         }
-        if(aux.atributo.Equals("fuersa") ){
+        if(aux.compare("fuerza") ){
             Vitality  = Vitality + aux.puntos;      
+            return;
         }
+        Debug.Log(" no esta comparando nada :'v");
+        
     }
 }

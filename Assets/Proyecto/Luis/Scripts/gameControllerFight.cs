@@ -24,7 +24,7 @@ public class gameControllerFight : MonoBehaviour
     public int enemypointsinit=1000;//food
     public Slider lifeSlider;
     public Slider enemySlider;
-    public int enemyDamage=100;
+    public int enemyDamage=200;
     public int playerDamage;
     public bool endGame;
     public GameObject winDisplay;

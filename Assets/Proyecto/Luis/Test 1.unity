@@ -2079,7 +2079,7 @@ MonoBehaviour:
   enemypointsinit: 1000
   lifeSlider: {fileID: 2081977339}
   enemySlider: {fileID: 218101700}
-  enemyDamage: 10
+  enemyDamage: 150
   playerDamage: 10
   endGame: 1
   winDisplay: {fileID: 1821133801}

@@ -25,5 +25,8 @@ public class Item {
     {
         return imagen;
     }
+    public bool compare(string a ){
+        return a.Equals(atributo);
+    }
 
 }
