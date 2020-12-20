@@ -12,7 +12,8 @@ public class UIcontroller : MonoBehaviour
     void Start()
     {
         // niño 1, nina 2
-        if(gender == 1){
+        int avatar = PlayerPrefs.GetInt("Avatar",1);
+        if(avatar == 1){
             ButtonBoy.onClick.AddListener(TaskOnClickBoy);
         }else
         {

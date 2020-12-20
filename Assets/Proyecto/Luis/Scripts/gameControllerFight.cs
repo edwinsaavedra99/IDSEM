@@ -27,10 +27,10 @@ public class gameControllerFight : MonoBehaviour
     public int enemyDamage=100;
     public int playerDamage;
     public bool endGame;
+    public GameObject winDisplay;
+    public GameObject loseDisplay;
     
-
-
-    
+       
     void Start()
     {
         //datos 
@@ -63,10 +63,12 @@ public class gameControllerFight : MonoBehaviour
             this.endGame =true;
             this.Player.getDead();
             SoundController.Instance.loseGame();
+            loseDisplay.SetActive(true);
         }
         if(enemypointsinit <=0){
             this.endGame = true;
             SoundController.Instance.winGame();
+            winDisplay.SetActive(true);
             
         }
         
