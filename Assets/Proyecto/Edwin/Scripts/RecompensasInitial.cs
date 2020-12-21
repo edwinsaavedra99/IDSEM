@@ -25,7 +25,7 @@ public class RecompensasInitial : MonoBehaviour
             item1.sprite = items[0].imagen.sprite;
             item2.sprite = items[1].imagen.sprite;
             item3.sprite = items[2].imagen.sprite;
-            title.text = "Nivel 1";
+            title.text = "FELICITACIONES SUPERASTE EL NIVEL "+ nivel;
             PlayerPrefs.SetString("Recompensa1",items[0].id);
             PlayerPrefs.SetString("Recompensa2", items[1].id);
             PlayerPrefs.SetString("Recompensa3", items[2].id);
