@@ -8,6 +8,8 @@ Desarrollo del juego para Desktop Windows con:
  
 # Resultados
 
+VISTA
+
     ![Screenshot](recursos/portada.png)   
 
 
