@@ -21,7 +21,7 @@ public class ExitLevel5 : MonoBehaviour
         
     }
     void TaskOnclickExit(){
-        SceneManager.LoadScene("Splash");
+        SceneManager.LoadScene("Inicio");
     }
 
 }

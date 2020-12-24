@@ -8,7 +8,7 @@ public class AuxScript : MonoBehaviour
     void Start()
     {
         //PlayerPrefs.DeleteKey("NivelDesblock");
-        PlayerPrefs.DeleteAll();
+        ///PlayerPrefs.DeleteAll();
     }
 
     // Update is called once per frame
