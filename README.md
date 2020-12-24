@@ -8,11 +8,6 @@ Desarrollo del juego para Desktop Windows con:
  
 # Resultados
 
-VISTA
-
-    ![Screenshot](recursos/portada.png)   
-
-
 Ejecutable en : 
 
 - https://gamejolt.com/games/mathworldidse/561552
