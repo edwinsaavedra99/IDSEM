@@ -8,7 +8,7 @@ Desarrollo del juego para Desktop Windows con:
  
 # Resultados
 
-    ![Screenshot](FilesReadme/Portada.png)   
+    ![Screenshot](recursos/portada.png)   
 
 
 Ejecutable en : 
